@@ -22,9 +22,9 @@
         var added = false;
         nx.forEach(
           this.data,
-          function(key, value) {
+          function(index, value) {
             if (element.priority < value.priority) {
-              this.data.splice(i, 0, element);
+              this.data.splice(index, 0, element);
               added = true;
               return nx.BREAKER;
             }

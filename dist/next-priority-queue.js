@@ -3,7 +3,7 @@
  * description: Priority queue for next.
  * url: https://github.com/afeiship/next-priority-queue
  * version: 1.0.0
- * date: 2020-02-04 13:48:13
+ * date: 2020-02-04 13:58:50
  * license: MIT
  */
 
@@ -31,9 +31,9 @@
         var added = false;
         nx.forEach(
           this.data,
-          function(key, value) {
+          function(index, value) {
             if (element.priority < value.priority) {
-              this.data.splice(i, 0, element);
+              this.data.splice(index, 0, element);
               added = true;
               return nx.BREAKER;
             }
