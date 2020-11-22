@@ -3,7 +3,7 @@
  * description: Priority queue for next.
  * homepage: https://github.com/afeiship/next-priority-queue
  * version: 1.0.0
- * date: 2020-11-22 19:51:56
+ * date: 2020-11-22 19:53:08
  * license: MIT
  */
 
