@@ -1,19 +1,19 @@
 /*!
- * name: @feizheng/next-priority-queue
+ * name: @jswork/next-priority-queue
  * description: Priority queue for next.
- * url: https://github.com/afeiship/next-priority-queue
+ * homepage: https://github.com/afeiship/next-priority-queue
  * version: 1.0.0
- * date: 2020-02-04 13:58:50
+ * date: 2020-11-22 19:51:56
  * license: MIT
  */
 
 (function() {
   var global = global || this || window || Function('return this')();
-  var nx = global.nx || require('@feizheng/next-js-core2');
-  var NxQueue = nx.Queue || require('@feizheng/next-queue');
+  var nx = global.nx || require('@jswork/next');
+  var NxQueue = nx.Queue || require('@jswork/next-queue');
   var Element = nx.declare({
     methods: {
-      init: function(inElement, inPriority) {
+      init: function (inElement, inPriority) {
         this.element = inElement;
         this.priority = inPriority;
       }
@@ -26,12 +26,12 @@
       Element: Element
     },
     methods: {
-      enqueue: function(inElement, inPriority) {
+      enqueue: function (inElement, inPriority) {
         var element = new Element(inElement, inPriority);
         var added = false;
         nx.forEach(
           this.data,
-          function(index, value) {
+          function (index, value) {
             if (element.priority < value.priority) {
               this.data.splice(index, 0, element);
               added = true;
@@ -50,5 +50,3 @@
     module.exports = NxPriorityQueue;
   }
 })();
-
-//# sourceMappingURL=next-priority-queue.js.map
